@@ -7,6 +7,7 @@ import { markComplete } from "./markComplete";
 import { updateDOM } from "./updateDOM";
 import { viewAllProjects } from "./viewAllProjects";
 import { viewProject } from "./viewProject";
+import { createProject } from "./createProject";
 
 // for testing
 console.log("hello world");
@@ -15,16 +16,48 @@ createTodo();
 deleteTodo();
 expandTodo();
 markComplete();
-updateDOM();
+// updateDOM();
 viewAllProjects();
 viewProject();
+// createProject();
 
-// assign current project click and run DOM update
-const linksBtn = document.querySelectorAll(".projects");
+// set class for Project objects
+class Project {
+  constructor(name) {
+    this.name = name;
+    this.todo = [];
+  }
+
+  addTodo(newTodo) {
+    this.todo.push(newTodo);
+  }
+}
+
+class Todo {
+  constructor(name, description, dueDate, priority) {
+    this.name = name;
+    this.description = description;
+    this.dueDate = dueDate;
+    this.priority = priority;
+  }
+}
+
+let gardenProject = new Project("Garden");
+let tempTodo = new Todo("Weed backyard", "Spray weeds in backyard, pull easy ones", "March 11", "Low");
+gardenProject.addTodo(tempTodo);
+console.log(gardenProject);
+
+// add project click, create project object
+// NEED TO LEARN MODALS, PASS MODAL INFO THROUGH CREATEPROJECT MODULE
+const addProjectBtn = document.querySelector('#addProject');
+addProjectBtn.addEventListener('click', createProject());
+
+// current project click, run DOM update
+const linksBtn = [...document.querySelectorAll('.projects')];
 linksBtn.forEach((el) => {
-  el.addEventListener("click", () => {
+  el.addEventListener('click', (e) => {
     const currentProject = viewProject();
-    console.log(currentProject);
+    console.log(e);
     updateDOM(currentProject);
   });
 });
