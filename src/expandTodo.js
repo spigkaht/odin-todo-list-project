@@ -1,3 +1,3 @@
-export default function expandTodo() {
-  console.log("expandTodo is working");
-}
+const expandTodo = () => {};
+
+export { expandTodo };

@@ -1,3 +1,3 @@
-export default function changePriority() {
-  console.log("changePriority is working");
-}
+const changePriority = () => {};
+
+export { changePriority };

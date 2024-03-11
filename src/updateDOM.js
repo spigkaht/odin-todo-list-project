@@ -1,3 +1,5 @@
-export default function updateDOM() {
-  console.log("updateDOM is working");
-}
+const updateDOM = (project) => {
+  
+};
+
+export { updateDOM };

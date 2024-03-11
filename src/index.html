@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= htmlWebpackPlugin.options.title %></title>
-    
   </head>
   <body>
     <div id="header">
@@ -19,11 +18,11 @@
         <a href=""># All Projects</a>
       </div>
       <div id="links">
-        <a href=""><span class="hash">#</span> Kitchen</a>
-        <a href=""><span class="hash">#</span> Garden</a>
-        <a href=""><span class="hash">#</span> Laundry</a>
-        <a href=""><span class="hash">#</span> Bathroom</a>
-        <a href=""><span class="hash">#</span> Other</a>
+        <a class="projects" id="project1" href=""><span class="hash">#</span> Kitchen</a>
+        <a class="projects" id="project2" href=""><span class="hash">#</span> Garden</a>
+        <a class="projects" id="project3" href=""><span class="hash">#</span> Laundry</a>
+        <a class="projects" id="project4" href=""><span class="hash">#</span> Bathroom</a>
+        <a class="projects" id="project5" href=""><span class="hash">#</span> Other</a>
       </div>
       <div></div>
     </div>
@@ -76,7 +75,9 @@
           <div class="todo-list-item">
             <input type="checkbox" id="todo7" name="todo7" />
             <label for="todo7">Clean out pantry</label>
-            <p class="text-right">Clean out pantry, dispose of any out of date items</p>
+            <p class="text-right">
+              Clean out pantry, dispose of any out of date items
+            </p>
             <p>Due: March 18</p>
             <p class="text-right">Priority: Low</p>
           </div>

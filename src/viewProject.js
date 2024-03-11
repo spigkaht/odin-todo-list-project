@@ -1,3 +1,5 @@
-export default function viewProject() {
-  console.log("viewProject is working");
-}
+const viewProject = () => {
+
+};
+
+export { viewProject };
