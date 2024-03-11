@@ -1,3 +1,3 @@
 export default function changePriority() {
-  console.log("changePrioirity working");
+  console.log("changePriority is working");
 }
