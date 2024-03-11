@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'robotoFont';
+  src: url('./Roboto-Regular.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'madimiFont';
+  src: url('./MadimiOne-Regular.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -8,11 +22,11 @@
 body {
   height: 100vh;
   width: 100vw;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: 'robotoFont', sans-serif;
   font-size: 20px;
   display: grid;
   grid-template-rows: 1fr 6fr;
-  grid-template-columns: 3fr 8fr;
+  grid-template-columns: 1fr 5fr;
 }
 
 a {
@@ -51,7 +65,7 @@ fieldset {
 
 #name,
 #site-name {
-  font-family: "Roboto";
+  font-family: 'madimiFont', sans-serif;;
   font-weight: 800;
 }
 
@@ -69,7 +83,7 @@ fieldset {
   font-size: 22px;
   background-color: #eece9f;
   display: grid;
-  grid-template-rows: 1fr 8fr 1fr;
+  grid-template-rows: 1fr 1fr 8fr 1fr;
   padding: 20px 20px 20px 35px;
 }
 
