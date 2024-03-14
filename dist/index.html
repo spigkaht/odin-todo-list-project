@@ -4,26 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Odin Todo List Project</title>
-    
   <script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script><script defer src="changePriority.bundle.js"></script></head>
   <body>
+    <dialog id="dialog">
+      <form action="">
+        <div>
+          <label for="inputName">Name:</label>
+          <input type="text" name="inputName" id="inputName" />
+        </div>
+        <div>
+          <label for="inputDescription">Description</label>
+          <input type="text" name="inputDescription" id="inputDescription" />
+        </div>
+        <div>
+          <label for="inputDueDate">Due Date:</label>
+          <input type="text" name="inputDueDate" id="inputDueDate" />
+        </div>
+        <div>
+          <label for="inputPriority">Priority:</label>
+          <input type="text" name="inputPriority" id="inputPriority" />
+        </div>
+      </form>
+    </dialog>
     <div id="header">
       <div id="name">Benjamin</div>
       <div id="site-name">Todooly</div>
     </div>
     <div id="sidebar">
       <div id="add-project">
-        <a href="">+ Add Project</a>
+        <button id="addProject" type="button">+ Add Project</button>
       </div>
-      <div id="add-project">
-        <a href=""># All Projects</a>
+      <div>
+        <button># All Projects</button>
       </div>
       <div id="links">
-        <a href=""><span class="hash">#</span> Kitchen</a>
-        <a href=""><span class="hash">#</span> Garden</a>
-        <a href=""><span class="hash">#</span> Laundry</a>
-        <a href=""><span class="hash">#</span> Bathroom</a>
-        <a href=""><span class="hash">#</span> Other</a>
+        <button class="projects" id="project1" type="button">
+          <span class="hash">#</span> General
+        </button>
+        <button class="projects" id="project2" type="button">
+          <span class="hash">#</span> Kitchen
+        </button>
+        <button class="projects" id="project3" type="button">
+          <span class="hash">#</span> Garden
+        </button>
+        <button class="projects" id="project4" type="button">
+          <span class="hash">#</span> Laundry
+        </button>
+        <button class="projects" id="project5" type="button">
+          <span class="hash">#</span> Bathroom
+        </button>
       </div>
       <div></div>
     </div>
@@ -76,7 +105,9 @@
           <div class="todo-list-item">
             <input type="checkbox" id="todo7" name="todo7" />
             <label for="todo7">Clean out pantry</label>
-            <p class="text-right">Clean out pantry, dispose of any out of date items</p>
+            <p class="text-right">
+              Clean out pantry, dispose of any out of date items
+            </p>
             <p>Due: March 18</p>
             <p class="text-right">Priority: Low</p>
           </div>

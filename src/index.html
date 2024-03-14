@@ -6,85 +6,134 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
+    <dialog id="projectDialog">
+      <p class="dialog-title">Create New Project</p>
+      <form action="">
+        <div class="textLabel">
+          <label for="inputProjectName">Name:</label>
+        </div>
+        <div class="textInput">
+          <input type="text" name="inputProjectName" id="inputProjectName" />
+        </div>
+        <div class="project-form-buttons">
+          <button class="formButton" id="formBtnClose">Close</button>
+          <button class="formButton" id="formBtnEnter">Enter</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="todoDialog">
+      <form action="">
+        <p class="dialog-title">Add New Todo</p>
+        <div>
+          <div class="todo-text-inputs">
+            <label for="inputName">Name:</label>
+            <input type="text" name="inputName" id="inputName" />
+          </div>
+          <div class="todo-text-inputs">
+            <label for="inputDescription">Description</label>
+            <input type="text" name="inputDescription" id="inputDescription" />
+          </div>
+          <div class="todo-text-inputs">
+            <label for="inputDueDate">Due Date:</label>
+            <input type="text" name="inputDueDate" id="inputDueDate" />
+          </div>
+          <div class="todo-text-inputs">
+            <label for="inputPriority">Priority:</label>
+            <input type="text" name="inputPriority" id="inputPriority" />
+          </div>
+        </div>
+        <div class="project-form-buttons">
+          <button class="formButton" id="formBtnClose">Close</button>
+          <button class="formButton" id="formBtnEnter">Enter</button>
+        </div>
+      </form>
+    </dialog>
     <div id="header">
       <div id="name">Benjamin</div>
       <div id="site-name">Todooly</div>
     </div>
     <div id="sidebar">
       <div id="add-project">
-        <button id="addProject" type="button">+ Add Project</button>
+        <button id="addProject" type="button">
+          <span class="hash">+</span>Add Project
+        </button>
       </div>
       <div>
-        <button># All Projects</button>
+        <button id="allProjects">
+          <span class="hash"># </span>All Projects
+        </button>
       </div>
       <div id="links">
         <button class="projects" id="project1" type="button">
-          <span class="hash">#</span> General
+          <span class="hash"># </span>General
         </button>
         <button class="projects" id="project2" type="button">
-          <span class="hash">#</span> Kitchen
+          <span class="hash"># </span>Kitchen
         </button>
         <button class="projects" id="project3" type="button">
-          <span class="hash">#</span> Garden
+          <span class="hash"># </span>Garden
         </button>
         <button class="projects" id="project4" type="button">
-          <span class="hash">#</span> Laundry
+          <span class="hash"># </span>Laundry
         </button>
         <button class="projects" id="project5" type="button">
-          <span class="hash">#</span> Bathroom
+          <span class="hash"># </span>Bathroom
         </button>
       </div>
       <div></div>
     </div>
     <div id="main">
-      <div id="todo-title">Kitchen</div>
+      <div id="todo-title">
+        <p>Kitchen</p>
+        <button id="addTodo" type="button">+ Add Todo</button>
+      </div>
       <fieldset>
         <div id="todo-list">
           <div class="todo-list-item">
             <input type="checkbox" id="todo1" name="todo1" />
-            <label for="todo1">Clean Stove</label>
+            <label class="checkLabel" for="todo1">Clean Stove</label>
             <p class="text-right">Clean stove thoroughly</p>
             <p>Due: March 11</p>
             <p class="text-right">Priority: High</p>
           </div>
           <div class="todo-list-item">
             <input type="checkbox" id="todo2" name="todo2" />
-            <label for="todo2">Clean Oven</label>
+            <label class="checkLabel" for="todo2">Clean Oven</label>
             <p class="text-right">Spray oven with oven cleaner, wipe down</p>
             <p>Due: March 11</p>
             <p class="text-right">Priority: High</p>
           </div>
           <div class="todo-list-item">
             <input type="checkbox" id="todo3" name="todo3" />
-            <label for="todo3">Sweep floor</label>
+            <label class="checkLabel" for="todo3">Sweep floor</label>
             <p class="text-right">Sweep floor in kitchen</p>
             <p>Due: March 11</p>
             <p class="text-right">Priority: High</p>
           </div>
           <div class="todo-list-item">
             <input type="checkbox" id="todo4" name="todo4" />
-            <label for="todo4">Mop floor</label>
+            <label class="checkLabel" for="todo4">Mop floor</label>
             <p class="text-right">Mop floor, don't forget under refrigerator</p>
             <p>Due: March 11</p>
             <p class="text-right">Priority: High</p>
           </div>
           <div class="todo-list-item">
             <input type="checkbox" id="todo5" name="todo5" />
-            <label for="todo5">Empty bins</label>
+            <label class="checkLabel" for="todo5">Empty bins</label>
             <p class="text-right">Empty rubbish, recycling and can bins</p>
             <p>Due: March 11</p>
             <p class="text-right">Priority: High</p>
           </div>
           <div class="todo-list-item">
             <input type="checkbox" id="todo6" name="todo6" />
-            <label for="todo6">Stack dishwasher</label>
+            <label class="checkLabel" for="todo6">Stack dishwasher</label>
             <p class="text-right">Stack and run dishwasher</p>
             <p>Due: March 11</p>
             <p class="text-right">Priority: High</p>
           </div>
           <div class="todo-list-item">
             <input type="checkbox" id="todo7" name="todo7" />
-            <label for="todo7">Clean out pantry</label>
+            <label class="checkLabel" for="todo7">Clean out pantry</label>
             <p class="text-right">
               Clean out pantry, dispose of any out of date items
             </p>

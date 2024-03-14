@@ -50,7 +50,18 @@ console.log(gardenProject);
 // add project click, create project object
 // NEED TO LEARN MODALS, PASS MODAL INFO THROUGH CREATEPROJECT MODULE
 const addProjectBtn = document.querySelector('#addProject');
-addProjectBtn.addEventListener('click', createProject());
+const projectDialog = document.querySelector('#projectDialog');
+addProjectBtn.addEventListener('click', () => {
+  projectDialog.showModal();
+  createProject();
+});
+
+// add todo click, create todo object
+const addTodoBtn = document.querySelector('#addTodo');
+const todoDialog = document.querySelector('#todoDialog');
+addTodoBtn.addEventListener('click', () => {
+  todoDialog.showModal();
+});
 
 // current project click, run DOM update
 const linksBtn = [...document.querySelectorAll('.projects')];
